@@ -74,6 +74,52 @@
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
 
+  /* Half this number */
+    function halfNumber(num2) {
+      var num3 = 2;
+      var halfedNumber = num2 / num3;
+      document.getElementById("solution").innerHTML = 'Half of ' + num2 + ' is ' + halfedNumber;
+    }
+    var halfedButton = document.getElementById("half-button");
+    halfedButton.addEventListener("click", function () {
+      var num2 = document.getElementById("half-input").value;
+      halfNumber(num2);
+    });
+
+    /* Fraction Whole */
+      function percent(fra,per) {
+        var percentage = (fra / 100) * per;
+        document.getElementById("solution").innerHTML = fra + ' is ' + percentage + '% of ' + per;
+      }
+      var percentButton = document.getElementById("percent-button");
+      percentButton.addEventListener("click", function() {
+        var fra = document.getElementById("percent1-input").value;
+        var per = document.getElementById("percent2-input").value;
+        percent(fra,per);
+      });
+
+      /* Integer */
+    function integer(x) {
+      var integerround = Math.round(x);
+      document.getElementById("solution").innerHTML = ' The nearest whole number of ' + x + ' is ' + integerround;
+
+    }
+    var intButton = document.getElementById("int-button");
+    intButton.addEventListener("click", function() {
+      var x = document.getElementById("int-input").value;
+      integer(x);
+    })
+    /* Radius */
+    function areaR(radius) {
+      var area = 2 * Math.PI * radius
+      document.getElementById("solution").innerHTML = 'The area of a circle with radius ' + radius + ' is ' + area;
+    }
+    var areaButton = document.getElementById("area-button");
+    areaButton.addEventListener("click", function() {
+      var num100 = document.getElementById("area-input").value;
+      areaR(num100);
+    });
+    
 
 </script>
 </body>
